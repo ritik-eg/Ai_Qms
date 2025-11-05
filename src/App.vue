@@ -4,7 +4,7 @@
     <div class="main-container">
       <Sidebar />
       <div class="content-wrapper">
-        <EmergencyGroupForm />
+        <router-view />
       </div>
     </div>
   </div>
@@ -13,14 +13,12 @@
 <script>
 import Header from './components/Header.vue'
 import Sidebar from './components/Sidebar.vue'
-import EmergencyGroupForm from './components/EmergencyGroupForm.vue'
 
 export default {
   name: 'App',
   components: {
     Header,
-    Sidebar,
-    EmergencyGroupForm
+    Sidebar
   }
 }
 </script>
