@@ -59,12 +59,56 @@ npm run build
 npm run preview
 ```
 
+## Testing
+
+### Run Tests
+```bash
+npm test
+```
+
+### Run Tests in Watch Mode
+```bash
+npm test -- --watch
+```
+
+### Run Tests with Coverage
+```bash
+npm run test:coverage
+```
+
+**Note**: If you encounter vitest configuration issues, please refer to [TESTING_GUIDE.md](TESTING_GUIDE.md) for troubleshooting steps.
+
+**Test Suite Statistics**:
+- Total test files: 4
+- Total tests: 188
+- Coverage target: 80%+
+
+## Recent Updates
+
+### ✅ Fixed Navbar Overflow Issue
+- Added responsive handling for navigation items
+- Implemented `!important` for white text color visibility
+- Added flex-shrink and overflow management
+- Improved mobile responsiveness with media queries
+
+### ✅ Comprehensive Test Suite
+- 188 test cases written across all components
+- **Header**: 37 tests
+- **Sidebar**: 30 tests
+- **EmergencyGroupForm**: 69 tests
+- **App Integration**: 52 tests
+
+See [TEST_DOCUMENTATION.md](TEST_DOCUMENTATION.md) and [TESTING_GUIDE.md](TESTING_GUIDE.md) for details.
+
 ## Technologies Used
 
 - **Vue.js 3** - Progressive JavaScript framework
 - **Vite** - Next generation frontend tooling
 - **Font Awesome 6** - Icon library
 - **CSS3** - Modern styling
+- **Vitest** - Testing framework
+- **Vue Test Utils** - Component testing utilities
+- **Happy DOM** - DOM environment for tests
 
 ## Components Overview
 

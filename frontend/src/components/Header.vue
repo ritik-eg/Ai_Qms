@@ -77,20 +77,26 @@ export default {
   justify-content: space-between;
   align-items: center;
   padding: 0 20px;
-  height: 60px;
+  min-height: 60px;
   background-color: #5c6c7d;
   color: white;
+  overflow-x: auto;
+  overflow-y: hidden;
 }
 
 .nav-left {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 10px;
+  min-width: 0;
+  flex: 1;
+  overflow-x: auto;
 }
 
 .logo-section {
   display: flex;
   align-items: center;
+  flex-shrink: 0;
 }
 
 .logo-circle {
@@ -108,18 +114,33 @@ export default {
 .nav-menu {
   display: flex;
   align-items: center;
-  gap: 5px;
+  gap: 3px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  flex: 1;
+  min-width: 0;
+  padding: 5px 0;
+}
+
+/* Hide scrollbar but keep functionality */
+.nav-menu::-webkit-scrollbar {
+  height: 0;
+}
+
+.nav-menu {
+  scrollbar-width: none;
 }
 
 .nav-item {
-  padding: 8px 12px;
-  color: white;
+  padding: 8px 10px;
+  color: white !important;
   text-decoration: none;
-  font-size: 14px;
+  font-size: 13px;
   cursor: pointer;
   white-space: nowrap;
   transition: background-color 0.2s;
   border-radius: 4px;
+  flex-shrink: 0;
 }
 
 .nav-item:hover {
@@ -130,23 +151,27 @@ export default {
   display: flex;
   align-items: center;
   gap: 5px;
+  color: white !important;
 }
 
 .nav-right {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
+  flex-shrink: 0;
+  padding-left: 10px;
 }
 
 .icon-btn {
   background: none;
   border: none;
-  color: white;
-  font-size: 18px;
+  color: white !important;
+  font-size: 16px;
   cursor: pointer;
   padding: 8px;
   border-radius: 4px;
   transition: background-color 0.2s;
+  flex-shrink: 0;
 }
 
 .icon-btn:hover {
@@ -160,18 +185,20 @@ export default {
 
 .update-btn {
   background-color: transparent;
-  color: white;
+  color: white !important;
   border: 1px solid white;
-  padding: 6px 16px;
+  padding: 6px 14px;
   border-radius: 4px;
   cursor: pointer;
-  font-size: 14px;
+  font-size: 13px;
   transition: all 0.2s;
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
 .update-btn:hover {
   background-color: white;
-  color: #5c6c7d;
+  color: #5c6c7d !important;
 }
 
 .alarm-banner {
@@ -181,6 +208,8 @@ export default {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
 .alarm-content {
@@ -199,9 +228,41 @@ export default {
   align-items: center;
   gap: 10px;
   font-size: 14px;
+  flex-wrap: wrap;
 }
 
 .separator {
   opacity: 0.7;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1400px) {
+  .nav-item {
+    font-size: 12px;
+    padding: 6px 8px;
+  }
+
+  .nav-menu {
+    gap: 2px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .nav-bar {
+    padding: 0 10px;
+  }
+
+  .nav-left {
+    gap: 5px;
+  }
+
+  .nav-right {
+    gap: 5px;
+  }
+
+  .icon-btn {
+    font-size: 14px;
+    padding: 6px;
+  }
 }
 </style>

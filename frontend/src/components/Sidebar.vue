@@ -3,14 +3,14 @@
     <div class="sidebar-section">
       <div class="section-title">EMERGENCY</div>
       <nav class="sidebar-nav">
-        <a href="#" class="nav-link active">
+        <router-link to="/active-alarms" class="nav-link" active-class="active">
           <i class="fas fa-bell"></i>
           <span>Active alarms</span>
-        </a>
-        <a href="#" class="nav-link">
+        </router-link>
+        <router-link to="/emergency-groups" class="nav-link" active-class="active">
           <i class="fas fa-users"></i>
           <span>Emergency groups</span>
-        </a>
+        </router-link>
         <a href="#" class="nav-link">
           <i class="fas fa-history"></i>
           <span>Alarm history</span>
