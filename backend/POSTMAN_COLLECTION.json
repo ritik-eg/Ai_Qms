@@ -1,0 +1,184 @@
+{
+  "info": {
+    "name": "Emergency Management System API",
+    "description": "Complete API collection for Emergency Management System",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Emergency Groups",
+      "item": [
+        {
+          "name": "Get All Emergency Groups",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/v1/emergency-groups?page=0&size=10",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["api", "v1", "emergency-groups"],
+              "query": [
+                {"key": "page", "value": "0"},
+                {"key": "size", "value": "10"},
+                {"key": "type", "value": "", "disabled": true},
+                {"key": "search", "value": "", "disabled": true}
+              ]
+            }
+          }
+        },
+        {
+          "name": "Get Emergency Group by ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "http://localhost:8080/api/v1/emergency-groups/1"
+          }
+        },
+        {
+          "name": "Create Emergency Group",
+          "request": {
+            "method": "POST",
+            "header": [{"key": "Content-Type", "value": "application/json"}],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Fire Response Team\",\n  \"number\": \"FIRE-001\",\n  \"type\": \"Fire Emergency\",\n  \"notificationType\": \"ALARM\",\n  \"responsible\": \"John Doe\",\n  \"emailTopic\": \"Fire Emergency Alert\",\n  \"emailContent\": \"Fire emergency detected\",\n  \"smsText\": \"FIRE ALERT\",\n  \"memberCount\": 25,\n  \"createdBy\": \"admin\"\n}"
+            },
+            "url": "http://localhost:8080/api/v1/emergency-groups"
+          }
+        },
+        {
+          "name": "Update Emergency Group",
+          "request": {
+            "method": "PUT",
+            "header": [{"key": "Content-Type", "value": "application/json"}],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Updated Fire Response Team\",\n  \"memberCount\": 30\n}"
+            },
+            "url": "http://localhost:8080/api/v1/emergency-groups/1"
+          }
+        },
+        {
+          "name": "Delete Emergency Group",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": "http://localhost:8080/api/v1/emergency-groups/1"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Active Alarms",
+      "item": [
+        {
+          "name": "Get All Active Alarms",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/v1/active-alarms?page=0&size=10&status=ACTIVE",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["api", "v1", "active-alarms"],
+              "query": [
+                {"key": "page", "value": "0"},
+                {"key": "size", "value": "10"},
+                {"key": "status", "value": "ACTIVE"},
+                {"key": "groupId", "value": "", "disabled": true}
+              ]
+            }
+          }
+        },
+        {
+          "name": "Get Active Alarm by ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "http://localhost:8080/api/v1/active-alarms/1"
+          }
+        },
+        {
+          "name": "Activate Alarm",
+          "request": {
+            "method": "POST",
+            "header": [{"key": "Content-Type", "value": "application/json"}],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"activatedBy\": \"admin\",\n  \"methods\": [\"EMAIL\", \"SMS\", \"PUSH\"]\n}"
+            },
+            "url": "http://localhost:8080/api/v1/emergency-groups/1/activate-alarm"
+          }
+        },
+        {
+          "name": "Deactivate Alarm",
+          "request": {
+            "method": "POST",
+            "header": [{"key": "Content-Type", "value": "application/json"}],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"deactivatedBy\": \"admin\",\n  \"notes\": \"Emergency resolved\"\n}"
+            },
+            "url": "http://localhost:8080/api/v1/active-alarms/1/deactivate"
+          }
+        },
+        {
+          "name": "Get Active Alarm Count",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "http://localhost:8080/api/v1/active-alarms/count"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Alarm History",
+      "item": [
+        {
+          "name": "Get Alarm History",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/v1/alarm-history?page=0&size=10",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["api", "v1", "alarm-history"],
+              "query": [
+                {"key": "page", "value": "0"},
+                {"key": "size", "value": "10"},
+                {"key": "groupId", "value": "", "disabled": true}
+              ]
+            }
+          }
+        },
+        {
+          "name": "Get History by Group ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "http://localhost:8080/api/v1/emergency-groups/1/alarm-history"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Statistics",
+      "item": [
+        {
+          "name": "Get Dashboard Statistics",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "http://localhost:8080/api/v1/statistics/dashboard"
+          }
+        }
+      ]
+    }
+  ]
+}
