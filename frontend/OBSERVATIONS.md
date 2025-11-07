@@ -10,31 +10,16 @@
 2. [Frontend Architecture Observations](#frontend-architecture-observations)
 3. [Backend Architecture Observations](#backend-architecture-observations)
 4. [AI-Assisted Development Insights](#ai-assisted-development-insights)
-5. [Technical Stack](#technical-stack)
-6. [Key Learnings](#key-learnings)
-7. [Best Practices & Recommendations](#best-practices--recommendations)
-8. [Known Limitations](#known-limitations)
-9. [Future Improvements](#future-improvements)
+5. [Technology Stack]
 
 ---
 
 ## Project Screenshots
+<img alt="s4" src="https://github.com/user-attachments/assets/c24c7a92-2dfa-4c90-8e38-5572d973c51c" width = "50%"/>
+<img alt="s3" src="https://github.com/user-attachments/assets/503c6e5b-331b-4984-b103-3305abdef17b" width = "50%"/>
+<img alt="s2" src="https://github.com/user-attachments/assets/b8f36fc4-e0b6-4fdf-8b7a-33f6a3b6d9c3" width = "50%"/>
+<img alt="s1" src="https://github.com/user-attachments/assets/5b32bc68-0f2b-42e5-9c9d-92cda0e729ba" width = "50%"/>
 
-### Dashboard Overview
-![Emergency Management Dashboard](./images/s1.png)
-*Main dashboard showing the emergency management interface with navigation and key features*
-
-### Alarm Management Interface
-![Alarm Management](./images/s2.png)
-*Alarm configuration and monitoring system with real-time notifications*
-
-### Emergency Group Management
-![Emergency Group Management](./images/s3.png)
-*Group creation and management interface for organizing emergency response teams*
-
-### Document Management System
-![Document Management](./images/s4.png)
-*Document upload, categorization, and retrieval system for emergency protocols*
 
 ---
 
@@ -128,29 +113,6 @@ components/
 - Business logic mixed with presentation
 - API calls directly in components
 - No separation of concerns
-
-**Best Practices**:
-```javascript
-// Composables for reusable logic
-composables/
-├── useAlarms.js
-├── useGroups.js
-├── useDocuments.js
-└── useNotifications.js
-
-// Services for API interactions
-services/
-├── api.js
-├── alarmService.js
-├── groupService.js
-└── documentService.js
-
-// Utils for helper functions
-utils/
-├── validators.js
-├── formatters.js
-└── constants.js
-```
 
 ---
 
@@ -314,87 +276,13 @@ private final ConcurrentHashMap<Long, Alarm> activeAlarms =
 
 ---
 
-## Technical Stack
-
-### Frontend
-| Technology | Version | Purpose |
-|------------|---------|---------|
-| Vue.js | 3.x | Progressive JavaScript framework |
-| Vite | Latest | Build tool and dev server |
-| Vue Router | 4.x | Client-side routing |
-| Axios | Latest | HTTP client for API calls |
-| CSS3 | - | Styling and animations |
-
-### Backend
-| Technology | Version | Purpose |
-|------------|---------|---------|
-| Spring Boot | 3.x | Application framework |
-| Spring Data JPA | 3.x | Database access layer |
-| Spring Security | 3.x | Authentication and authorization |
-| Hibernate | 6.x | ORM framework |
-| MySQL/PostgreSQL | 8.x/14+ | Relational database |
-| Lombok | Latest | Boilerplate reduction |
-
-### Development Tools
-- Git for version control
-- Maven for dependency management
-- Postman/Insomnia for API testing
-- Chrome DevTools for frontend debugging
-
----
-
-## Key Learnings
-
-### 1. **Component Architecture**
-- Small, focused components are easier to maintain
-- Composition over inheritance for code reuse
-- Clear separation between container and presentational components
-
-### 2. **State Management**
-- Keep state as close to where it's used as possible
-- Use composition API for complex state logic
-- Consider Pinia/Vuex for large-scale applications
-
-### 3. **API Integration**
-- Centralize API calls in service modules
-- Implement proper error handling and retry logic
-- Use interceptors for auth tokens and error handling
-
-### 4. **Code Quality**
-- TypeScript catches bugs before runtime
-- ESLint and Prettier enforce consistency
-- Unit tests provide confidence in refactoring
-
-### 5. **Performance**
-- Lazy loading for routes reduces initial bundle size
-- Virtual scrolling for large lists
-- Debouncing for search inputs
-- Memoization for expensive computations
-
----
-
 ## Best Practices & Recommendations
 
 ### Frontend Development
 
 #### 1. **Migration to TypeScript**
-**Priority**: High
-**Effort**: Medium
-**Benefits**:
-- 50% reduction in runtime errors
-- Better developer experience
-- Improved code documentation
-
-**Steps**:
-1. Install TypeScript dependencies
-2. Rename `.js` to `.ts` incrementally
-3. Add types to API responses
-4. Create interface definitions
-5. Enable strict mode gradually
 
 #### 2. **Component Library Creation**
-**Priority**: High
-**Effort**: Medium-High
 
 **Components to Build**:
 ```
@@ -492,81 +380,29 @@ public class Alarm {
    - No load balancing configured
    - Database connection pooling needs optimization
 
-2. **Real-time Features**
-   - Polling-based updates (consider WebSocket)
-   - No push notifications
-   - Limited offline support
 
-3. **Testing Coverage**
-   - Limited unit test coverage (< 40%)
-   - No E2E tests implemented
-   - Manual testing dependent
 
-4. **Documentation**
-   - API documentation incomplete
-   - Component documentation missing
-   - Deployment guide needed
 
-5. **Accessibility**
-   - ARIA labels missing
-   - Keyboard navigation incomplete
-   - Screen reader support limited
+## Technical Stack
 
----
+### Frontend
+| Technology | Version | Purpose |
+|------------|---------|---------|
+| Vue.js | 3.x | Progressive JavaScript framework |
+| Vite | Latest | Build tool and dev server |
+| Vue Router | 4.x | Client-side routing |
+| Axios | Latest | HTTP client for API calls |
+| CSS3 | - | Styling and animations |
 
-## Future Improvements
-
-### Short Term (1-3 months)
-
-#### Frontend
-- [ ] Migrate to TypeScript
-- [ ] Create component library
-- [ ] Implement comprehensive error handling
-- [ ] Add loading states and skeletons
-- [ ] Improve form validation
-- [ ] Add unit tests (target: 60% coverage)
-
-#### Backend
-- [ ] Add comprehensive input validation
-- [ ] Implement proper exception handling
-- [ ] Add integration tests
-- [ ] Optimize database queries
-- [ ] Implement caching strategy
-- [ ] Add API rate limiting
-
-### Medium Term (3-6 months)
-
-#### Features
-- [ ] Real-time notifications (WebSocket)
-- [ ] Advanced search and filtering
-- [ ] Export functionality (PDF, Excel)
-- [ ] Role-based access control (RBAC)
-- [ ] Audit logging system
-- [ ] Mobile responsive design improvements
-
-#### Infrastructure
-- [ ] Docker containerization
-- [ ] CI/CD pipeline setup
-- [ ] Automated testing in pipeline
-- [ ] Database migration scripts
-- [ ] Environment-specific configurations
-
-### Long Term (6-12 months)
-
-#### Architecture
-- [ ] Microservices migration (if needed)
-- [ ] Event-driven architecture
-- [ ] Message queue implementation
-- [ ] Distributed caching (Redis)
-- [ ] CDN integration for static assets
-
-#### Advanced Features
-- [ ] Machine learning for alarm prediction
-- [ ] Mobile application (React Native/Flutter)
-- [ ] Offline-first PWA capabilities
-- [ ] Multi-language support (i18n)
-- [ ] Advanced analytics dashboard
-- [ ] Integration with third-party emergency services
+### Backend
+| Technology | Version | Purpose |
+|------------|---------|---------|
+| Spring Boot | 3.x | Application framework |
+| Spring Data JPA | 3.x | Database access layer |
+| Spring Security | 3.x | Authentication and authorization |
+| Hibernate | 6.x | ORM framework |
+| MySQL/PostgreSQL | 8.x/14+ | Relational database |
+| Lombok | Latest | Boilerplate reduction |
 
 ---
 
