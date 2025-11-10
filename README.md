@@ -15,13 +15,29 @@
 ---
 
 ## Project Screenshots
-<img alt="s3" src="https://github.com/user-attachments/assets/503c6e5b-331b-4984-b103-3305abdef17b" width = "50%"/>
+<img alt="s3" src="https://github.com/user-attachments/assets/503c6e5b-331b-4984-b103-3305abdef17b" width = "50%"/> <img width="50%" alt="Screenshot 2025-11-07 at 3 43 00 PM" src="https://github.com/user-attachments/assets/14ec0d6c-d4c9-45b3-b9a9-1d67ddef50f2" />
 
-<img alt="s2" src="https://github.com/user-attachments/assets/b8f36fc4-e0b6-4fdf-8b7a-33f6a3b6d9c3" width = "50%"/>
 
-<img alt="s1" src="https://github.com/user-attachments/assets/5b32bc68-0f2b-42e5-9c9d-92cda0e729ba" width = "50%"/>
 
-<img alt="s4" src="https://github.com/user-attachments/assets/c24c7a92-2dfa-4c90-8e38-5572d973c51c" width = "50%"/>
+
+
+
+
+
+
+<img alt="s2" src="https://github.com/user-attachments/assets/b8f36fc4-e0b6-4fdf-8b7a-33f6a3b6d9c3" width = "50%"/> 
+
+<img alt="Screenshot 2025-11-07 at 3 42 42 PM" src="https://github.com/user-attachments/assets/80dc5d60-15c5-484f-a8ad-7a4be5753a19" width = "50%" />
+
+
+
+<img alt="s1" src="https://github.com/user-attachments/assets/5b32bc68-0f2b-42e5-9c9d-92cda0e729ba" width = "50%"/> 
+<img alt="Screenshot 2025-11-07 at 3 42 34 PM" src="https://github.com/user-attachments/assets/7d452a41-2dd7-41f6-8700-6e7baa408d49" width = "50%"/>
+
+
+
+
+<img alt="s4" src="https://github.com/user-attachments/assets/c24c7a92-2dfa-4c90-8e38-5572d973c51c" width = "50%"/> <img alt="Screenshot 2025-11-04 at 12 14 49 PM" src="https://github.com/user-attachments/assets/5efeb86a-718f-410a-8922-06cf4731889d" width = "50%"/>
 
 
 ---
